@@ -62,7 +62,7 @@ if(isset($_GET['delete_all'])){
 
       <tbody>
 
-         <?php 
+         <?php
          $select_cart_query = mysqli_prepare($conn, "SELECT * FROM `cart`");
          mysqli_stmt_execute($select_cart_query);
          $select_cart_result = mysqli_stmt_get_result($select_cart_query);
