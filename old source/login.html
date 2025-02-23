@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="login.php" method="post" autocomplete="on">
+  <fieldset>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required placeholder="Enter your username" aria-label="Username" aria-describedby="username-description">
+    <span id="username-description">Enter your username</span>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required>
+    <span class="error-message">Please enter a valid username</span>
+  </fieldset>
+  <input type="submit" value="Login">
+  <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+  <div id="loading" style="display:none;">Loading...</div>
+</form>
+<script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', function(event) {
+    const username = document.querySelector('#username');
+    const password = document.querySelector('#password');
+    if (username.value === '') {
+      alert('Please enter a username.');
+      event.preventDefault();
+    }
+    if (password.value === '') {
+      alert('Please enter a password.');
+      event.preventDefault();
+    }
+    showLoading();
+  });
+
+  function showLoading() {
+    document.getElementById('loading').style.display = 'block';
+  }
+</script>
+</body>
+</html>

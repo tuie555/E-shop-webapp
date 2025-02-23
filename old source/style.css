@@ -1,0 +1,30 @@
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    }
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    padding: 10px;
+    }
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    }
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    }
+
+input[type="submit"] {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: 0;
+    cursor: pointer;
+    }
