@@ -19,22 +19,6 @@
 CREATE DATABASE IF NOT EXISTS `e-shop` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `e-shop`;
 
--- Dumping structure for table e-shop.cart
-CREATE TABLE IF NOT EXISTS `cart` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `image` varchar(255) NOT NULL,
-  `quantity` int NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- Dumping data for table e-shop.cart: ~0 rows (approximately)
-INSERT INTO `cart` (`id`, `name`, `price`, `image`, `quantity`) VALUES
-	(1, 'Apple iPhone 13', 999.99, 'iphone13.jpg', 1),
-	(2, 'Samsung Galaxy S22', 899.99, 'galaxy_s22.jpg', 2),
-	(3, 'Google Pixel 6', 699.99, 'pixel6.jpg', 1);
-
 -- Dumping structure for table e-shop.productlist
 CREATE TABLE IF NOT EXISTS `productlist` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -46,11 +30,11 @@ CREATE TABLE IF NOT EXISTS `productlist` (
 
 -- Dumping data for table e-shop.productlist: ~5 rows (approximately)
 INSERT INTO `productlist` (`id`, `prdct_name`, `price`, `image`) VALUES
-	(1, 'Apple iPhone 13', 999.99, 'iphone13.jpg'),
-	(2, 'Samsung Galaxy S22', 899.99, 'galaxy_s22.jpg'),
-	(3, 'Google Pixel 6', 699.99, 'pixel6.jpg'),
-	(4, 'Apple MacBook Air', 1299.99, 'macbook_air.jpg'),
-	(5, 'Dell Inspiron Laptop', 799.99, 'inspiron_laptop.jpg');
+	(1, 'Amazon Gift card', 999.99, '1.png'),
+	(2, 'Xbox Gift card', 899.99, '2.png'),
+	(3, 'Windows Gift card', 699.99, '3.png'),
+	(4, 'Steam Gift card', 1299.99, '4.png'),
+	(5, 'Netflix Gift card', 799.99, 'R.png');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
