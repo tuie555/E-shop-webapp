@@ -1,7 +1,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
-require_once 'config.php';
+require_once '../../config.php';
 
 $stripe = new \Stripe\StripeClient(STRIPE_API_KEY);
 header('Content-Type: application/json');

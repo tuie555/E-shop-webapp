@@ -6,7 +6,7 @@
 
       <nav class="navbar">
          <a href="admin.php"></a>
-         <a href="product.php">products</a>
+         <a href="index.php">products</a>
       </nav>
 
       <?php

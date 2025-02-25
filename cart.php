@@ -36,7 +36,7 @@ if(isset($_GET['delete_all'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="../../css/style.css">
 
 </head>
 <body>
@@ -72,7 +72,7 @@ if(isset($_GET['delete_all'])){
          ?>
 
          <tr>
-            <td><img src="image/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
+            <td><img src="http://localhost:8000/image/<?php echo $fetch_cart['image']; ?>" height="100" alt=""></td>
             <td><?php echo $fetch_cart['name']; ?></td>
             <td>$<?php echo number_format($fetch_cart['price'], 0); ?></td>
             <td>
@@ -107,7 +107,7 @@ if(isset($_GET['delete_all'])){
          
          ?>
          <tr class="table-bottom">
-            <td><a href="product.php" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
+            <td><a href="../../product.php" class="option-btn" style="margin-top: 0;">continue shopping</a></td>
             <td colspan="3">grand total</td>
             <td>$<?php echo $grand_total; ?></td>
             <td><a href="cart.php?delete_all" onclick="return confirm('are you sure you want to delete all?');" class="delete-btn"> <i class="fas fa-trash"></i> delete all </a></td>
@@ -126,7 +126,7 @@ if(isset($_GET['delete_all'])){
 </div>
    
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+
 
 </body>
 </html>

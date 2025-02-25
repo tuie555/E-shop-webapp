@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
-$username = "";
-$password = "";
+$username = "root";
+$password = "camtse67";
 $dbname = "e-shop";
 $port = "3306";
 
